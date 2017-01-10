@@ -1,4 +1,4 @@
-#!/bin/sh -x 
+#!/bin/sh  
 echo "Pushing from $SPLUNK_MONITOR_LOCN to $SPLUNK_SERVER" 
 
 mkdir -p $SPLUNK_MONITOR_LOCN
@@ -25,7 +25,6 @@ fi
 if [ $? -eq 0 ]
 then
   echo "Successfully added monitor of $SPLUNK_MONITOR_LOCN"
-  exit 0
 else
   echo "Failed to monitor $SPLUNK_MONITOR_LOCN" >&2
   exit 1
