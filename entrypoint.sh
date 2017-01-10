@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh -x 
 echo "Pushing from $SPLUNK_MONITOR_LOCN to $SPLUNK_SERVER" 
 
 mkdir -p $SPLUNK_MONITOR_LOCN
