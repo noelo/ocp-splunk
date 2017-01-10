@@ -1,6 +1,8 @@
 #!/bin/sh 
 echo "Pushing from $SPLUNK_MONITOR_LOCN to $SPLUNK_SERVER" 
 
+mkdir -p $SPLUNK_MONITOR_LOCN
+
 /opt/splunkforwarder/bin/splunk start --accept-license
 if [ $? -eq 0 ]
 then
