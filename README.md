@@ -47,6 +47,8 @@ oc get daemonsets logging-fluentd -o json|jq '.spec.template.spec.containers |= 
 * *SPLUNK_MONITOR_LOCN* is the mountpoint of the shared volume which contains the logs
 * *SPLUNK_SERVER* is the address of the main Splunk server in *host:port* port format
 
+**Note** Ensure that you use the correct registry address in the image
+
 ### Create the shared volume
 ```
 oc volume daemonsets logging-fluentd --add --mount-path=/var/log/splunk --type=emptyDir
