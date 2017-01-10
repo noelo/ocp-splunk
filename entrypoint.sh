@@ -1,5 +1,5 @@
 #!/bin/sh 
-echo "Pushing from $LOG_FILES to $SPLUNK_SERVER" 
+echo "Pushing from $SPLUNK_MONITOR_LOCN to $SPLUNK_SERVER" 
 
 /opt/splunkforwarder/bin/splunk start --accept-license
 if [ $? -eq 0 ]
