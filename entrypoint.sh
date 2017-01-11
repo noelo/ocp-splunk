@@ -19,7 +19,7 @@ else
   exit 1
 fi
 
-/opt/splunkforwarder/bin/splunk add monitor $SPLUNK_MONITOR_LOCN -index ocplogs
+/opt/splunkforwarder/bin/splunk add monitor $SPLUNK_MONITOR_LOCN
 if [ $? -eq 0 ]
 then
   echo "Successfully added monitor of $SPLUNK_MONITOR_LOCN"
@@ -28,9 +28,4 @@ else
   exit 1
 fi
 
-while :; do
-  sleep 10
-done
-
-#tail -n 0 -f /opt/splunkforwarder/var/log/splunk/splunkd_stderr.log &
-#wait
+sleep infinity
