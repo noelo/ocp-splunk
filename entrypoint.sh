@@ -19,7 +19,7 @@ else
   exit 1
 fi
 
-/opt/splunkforwarder/bin/splunk add monitor -index ocplogs  $SPLUNK_MONITOR_LOCN
+/opt/splunkforwarder/bin/splunk add monitor -index=ocplogs  $SPLUNK_MONITOR_LOCN
 if [ $? -eq 0 ]
 then
   echo "Successfully added monitor of $SPLUNK_MONITOR_LOCN"
