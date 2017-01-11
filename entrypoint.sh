@@ -28,5 +28,9 @@ else
   exit 1
 fi
 
-tail -n 0 -f /opt/splunkforwarder/var/log/splunk/splunkd_stderr.log &
-wait
+while :; do
+  sleep 10
+done
+
+#tail -n 0 -f /opt/splunkforwarder/var/log/splunk/splunkd_stderr.log &
+#wait
