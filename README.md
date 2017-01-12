@@ -54,7 +54,8 @@ oc get daemonsets logging-fluentd -o json|jq '.spec.template.spec.containers |= 
 oc volume daemonsets logging-fluentd --add --mount-path=/var/log/splunk --type=emptyDir
 ```
 
-Changing the daemonset doesn't redeploy the pods so kill each pod.
+Changing the daemonset doesn't redeploy the pods so delete each logging-fluentd pod to apply the configuration.
+On shutdown OCP will complain about how long it is taking the pods to terminate, as far as I can tell this is due to the long termination grace period in the fluentd pod i.e. terminationGracePeriodSeconds: 300
 
 ## TODO
 1. Change Fluentd to remove forwarding to Elasticsearch
